@@ -33,4 +33,17 @@
         android:textColor="@color/green"
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:id="@+id/textView_htmlSnippet"
+        app:layout_constraintTop_toBottomOf="@id/textView_searchResultURL"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="@dimen/size_8"
+        android:layout_marginTop="@dimen/size_8"
+        tools:text="HTML snippet"
+        android:textSize="@dimen/size_17"
+        android:textColor="@color/gray"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
