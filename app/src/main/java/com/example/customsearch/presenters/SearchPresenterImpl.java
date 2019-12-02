@@ -26,19 +26,18 @@ public class SearchPresenterImpl implements SearchPresenter {
         searchInteractor.getSearchResults(query, getSearchResultsCallback());
     }
 
-    private Callback<SearchResponse> getSearchResultsCallback(){
-        return new Callback<SearchResponse>(){
+    private Callback<SearchResponse> getSearchResultsCallback() {
+        return new Callback<SearchResponse>() {
 
             @Override
             public void onResponse(Call<SearchResponse> call, Response<SearchResponse> response) {
-                if(response.isSuccessful()){
-                    if(response.body().getSearchResultList()!=null){
+                if (response.isSuccessful()) {
+                    if (response.body().getSearchResultList() != null) {
                         view.addSearchResults(response.body().getSearchResultList());
-                    }else {
+                    } else {
                         view.noResultMessage();
                     }
-                }
-                else {
+                } else {
                     view.unsuccessfulResponseMessage();
                 }
             }
